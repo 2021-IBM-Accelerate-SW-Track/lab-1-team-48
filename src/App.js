@@ -8,13 +8,13 @@ import CheckBox from './components/CheckBox'
 import RemoveTask from './components/RemoveTask'
 import Tasks from './components/Tasks'
 
+
 function App() {
   return (
     <div>
-    <NavBar /> 
+    <NavBar/> 
     <Example/>
     </div>
   );
-
 }
 export default App;
