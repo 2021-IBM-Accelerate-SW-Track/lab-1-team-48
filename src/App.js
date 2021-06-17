@@ -1,7 +1,7 @@
 import './App.css';
 import NavBar from './components/NavBar' 
 import './App.css';
-import {Example} from './components/Example'
+import Example from './components/Example'
 import TextBox from './components/TextBox'
 import AddButton from './components/AddButton'
 import CheckBox from './components/CheckBox'
