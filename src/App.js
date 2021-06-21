@@ -1,72 +1,79 @@
+import './App.css'
+//import NavBar from './component/NavBar/NavBar' 
+//import './App.css';
+//import Example from './components/Example'
+import Form from './component/form'
+import FormList from './component/form'
+//import AddButton from './components/AddButton'
+import Checkbox from './component/Checkbox/CheckBox'
+// import RemoveTask from './component/RemoveTask/RemoveTask'
+//import Tasks from './component/Tasks'
+import Header from './component/header'
 import React, { useState } from 'react';
-import Header from './component/header';
-import './App.css';
-import TodoForm from './component/body/TodoForm';
-import TodoList from './component/body/TodoList';
-import { v4 as uuid, v4 } from 'uuid';
+
+
 
 function App() {
-  const [todos, setTodos] = useState([
+  const [todoforms] = useState([
     {
       id: 1,
-      title: "Play",
-      isCompleted: false,
+      title: "To-do",
+      isCompleted: false
     },
     {
       id: 2,
-      title: "Play Cricket",
+      title: "To-do",
       isCompleted: true,
     },
     {
       id: 3,
-      title: "Play Chess",
-      isCompleted: true,
-    },
-    {
-      id: 4,
-      title: "Hello World",
-      isCompleted: true,
-    },
-  ]);
-
-  // Add a to-do
-  const addTodo = (text) => {
-    const newTodo = {
-      id: v4(),
-      title: text,
-      isCompleted: false
-    };
-  };
-
-  // Checks completed tasks
-  const checkTodo = (id) => {
-    console.log(id);
-    setTodos(todos.map((todo) => {
-      if(todo.id === id) todo.isCompleted = !todo.isCompleted;
-      console.log(todo.isCompleted);
-      return todo;
-    }));
-  }
-
-  
-  // Removes tasks 
-  const deleteTodo = (id) => {
-    setTodos(todos.filter(todo => todo.id !== id))
-  }
+      title: "Play",
+      isCompleted: false,
+    }
+  ])
 
 
   return (
-    <div className="App">
-      <Header/>
-      <TodoForm addTodo={addTodo} />
-      <TodoList todos={todos} checkTodo={checkTodo} deleteTodo={deleteTodo} />
+    <div class='App'>
+
+      <h1>
+        <Header />
+
+      </h1>
+
+      <Form />
+      <FormList todoform={todoforms} />
+
     </div>
+
+
+
   );
+
+
 }
 
 
+// //const handleCheckboxChange = event =>{
+// this.setState({ checked: event.target.checked })
+// return (
+//   <div>
+//     <div>
+//       <label>
+//         <Checkbox
+//           checked={this.state.checked}
+//           onChange={this.handleCheckboxChange}
+//         />
+//         <span>Label Text</span>
+//       </label>
+//     </div>
+//     <Header />
+//     <AddTask onAdd={todoforms} />
+//     {tasks.length > 0 ? (<Tasks tasks={tasks} onDelete=
+//       {deleteTodo} onToggle={todoforms} />) : (
+//       'No Task to show'
+//     )}
+//   </div>
+// ); }
 
 export default App;
-
-
-
