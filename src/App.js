@@ -1,15 +1,14 @@
 import './App.css'
-//import NavBar from './component/NavBar/NavBar' 
-//import './App.css';
-//import Example from './components/Example'
+import './App.css';
 import Form from './component/form'
 import FormList from './component/form'
-//import AddButton from './components/AddButton'
+import AddButton from './component/AddButton'
 import Checkbox from './component/Checkbox/CheckBox'
-// import RemoveTask from './component/RemoveTask/RemoveTask'
-//import Tasks from './component/Tasks'
+import Tasks from './component/Tasks'
 import Header from './component/header'
+import Datetime from './component/Datetime'
 import React, { useState } from 'react';
+
 
 
 
@@ -41,8 +40,14 @@ function App() {
 
       </h1>
 
+    
+
       <Form />
       <FormList todoform={todoforms} />
+      <Tasks />
+      <Checkbox />
+      <AddButton />
+      <Datetime />
 
     </div>
 
@@ -54,26 +59,5 @@ function App() {
 }
 
 
-// //const handleCheckboxChange = event =>{
-// this.setState({ checked: event.target.checked })
-// return (
-//   <div>
-//     <div>
-//       <label>
-//         <Checkbox
-//           checked={this.state.checked}
-//           onChange={this.handleCheckboxChange}
-//         />
-//         <span>Label Text</span>
-//       </label>
-//     </div>
-//     <Header />
-//     <AddTask onAdd={todoforms} />
-//     {tasks.length > 0 ? (<Tasks tasks={tasks} onDelete=
-//       {deleteTodo} onToggle={todoforms} />) : (
-//       'No Task to show'
-//     )}
-//   </div>
-// ); }
 
 export default App;
