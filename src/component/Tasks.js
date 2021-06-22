@@ -35,3 +35,5 @@ function showTasks(){
     inputBox.value = "";
 }
 //Adam this is your component
+
+export default Tasks

@@ -4,7 +4,7 @@ import { Delete } from '@material-ui/icons';
 const RemoveTask = (deleteTodo) => {
     return (
         <div>
-            const deleteTodo = (id) => {
+            const deleteTodo=(id)= {
                 setTodos(todos.filter(todo => todo.id !== id))
             }
 
