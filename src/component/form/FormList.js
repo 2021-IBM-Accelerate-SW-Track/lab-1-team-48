@@ -1,13 +1,13 @@
 import React from "react";
 import Form from "./Form"
 
-const FormList = ({ todoforms }) => {
-    return(
+const FormList = ({ todoforms, deleteTodo }) => {
+    return (
         <div>
-            {todoforms.map(todoform =>(
-                <Form key={todoform.id} todoforms={todoform.title}/>
+            {todoforms.map(todoform => (
+                <Form key={todoform.id} todoforms={todoform.title} deleteTodo={deleteTodo} id={todoform.id} />
 
-            ))}    
+            ))}
         </div>
     );
 };
